@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Частые вопросы о шиномонтаже «Низкий профиль» в Жулебино: адрес, график, RunFlat, радиус до R24 и виброконтроль Hunter.">
+  <title>Частые вопросы — Низкий профиль</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- seo:auto -->
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="На главную"><img src="assets/images/logo.png" alt="Логотип шиномонтажа" class="brand__logo"></a>
+    <nav class="site-nav" aria-label="Навигация"><button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="gallery.html">Работы</a><a href="price.html">Прайс</a><a href="about.html">О нас</a><a class="is-active" href="faq.html">Вопросы</a><a href="contacts.html">Контакты</a></div></nav>
+    <a class="header-phone" href="tel:+79654357272" aria-label="Позвонить"><i data-lucide="phone"></i><span>+7 965 435-72-72</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--faq">
+      <div class="section-shell page-hero__grid">
+        <div data-animate>
+          <h1>Частые вопросы</h1>
+          <p>Коротко о том, как нас найти, когда мы работаем и с какими колёсами берёмся.</p>
+        </div>
+        <button class="btn btn--primary" type="button" data-open-booking data-animate><i data-lucide="calendar-check"></i>Записаться</button>
+      </div>
+    </section>
+
+    <section class="section faq-page">
+      <div class="section-shell">
+        <div class="faq-list" data-animate>
+          <details class="faq-item">
+            <summary>Где находится шиномонтаж?</summary>
+            <p>Москва, ул. Привольная, 70к1, район Жулебино. Удобно заехать с м. Кузьминки и Выхино.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Какой график работы?</summary>
+            <p>Ежедневно с 9:00 до 22:00, без выходных.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Работаете ли с RunFlat и низким профилем?</summary>
+            <p>Да, это наша специализация. Аккуратно монтируем RunFlat, низкий профиль и усиленный борт.</p>
+          </details>
+          <details class="faq-item">
+            <summary>До какого радиуса берётесь?</summary>
+            <p>До R24, включая легковые, кроссоверы, внедорожные A/T и M/T, а также мото-колёса.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что такое виброконтроль Hunter?</summary>
+            <p>Диагностика колеса под дорожной нагрузкой на стенде Hunter Road Force Elite. Помогает найти вибрацию, боковой увод и неоднородность шины, которую не видно при обычной балансировке. <a href="vibrocontrol.html">Подробнее о виброконтроле</a>.</p>
+          </details>
+        </div>
+        <div class="faq-page__cta" data-animate>
+          <p>Не нашли ответ? Позвоните или оставьте заявку — подскажем по вашей задаче.</p>
+          <div class="hero-actions">
+            <a class="btn btn--call" href="tel:+79654357272"><i data-lucide="phone"></i>+7 965 435-72-72</a>
+            <a class="btn btn--ghost" href="contacts.html"><i data-lucide="map-pinned"></i>Контакты</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="section-shell footer-shell"><div class="footer-grid"><img src="assets/images/logo.png" alt="Логотип" class="footer-logo"><p>Москва, Привольная 70к1 · ежедневно 9:00-22:00</p><a href="tel:+79654357272">+7 965 435-72-72</a></div><p class="footer-seo">Шиномонтаж «Низкий профиль» в Жулебино — ул. Привольная, 70к1, рядом с м. Кузьминки и Выхино. Низкий профиль, RunFlat, диски до R24, Hunter Road Force Elite, правка, сварка, покраска и хранение шин. <a href="faq.html">Частые вопросы</a></p></div></footer>
+  <div class="modal" id="bookingModal" aria-hidden="true"><div class="modal__backdrop" data-close-modal></div><div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal__close" type="button" aria-label="Закрыть" data-close-modal><i data-lucide="x"></i></button><img src="assets/images/booking.jpg" alt="" class="modal__image"><div class="modal__body"><h2 id="modalTitle">Записаться в сервис</h2><p>Оставьте телефон и услугу. Мы уточним детали и подберём удобное время.</p><form class="booking-form"><input type="text" name="name" placeholder="Ваше имя"><input type="tel" name="phone" placeholder="+7 900 000-00-00" required><select name="service"><option>Шиномонтаж</option><option>Продажа шин</option><option>Виброконтроль Hunter</option><option>Правка дисков</option><option>Аргонная сварка</option><option>Порошковая покраска</option><option>Хранение шин</option></select><textarea name="comment" rows="3" placeholder="Радиус, тип шин или комментарий"></textarea><button class="btn btn--primary" type="submit"><i data-lucide="send"></i>Отправить заявку</button><p class="form-status" role="status"></p></form></div></div></div>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" onload="window.lucide && window.lucide.createIcons()"></script>
+</body>
+</html>

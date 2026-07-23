@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      PORT: "8080"
+      START_BOT: "1"
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./server/bookings.json:/app/server/bookings.json

@@ -1,0 +1,19 @@
+# Секреты и данные
+.env
+server/bookings.json
+server/bookings.json.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Внутренние заметки (не для публичного репо)
+ТЗ.TXT
