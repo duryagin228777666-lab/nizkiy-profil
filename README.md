@@ -51,6 +51,17 @@
 | **Fly.io** | Альтернативный деплой (`fly.toml`) |
 | **VPS (Ubuntu)** | Production (Timeweb / Beget / Selectel и т.п.) |
 
+### AI / knowledge graph
+| Технология | Назначение |
+|---|---|
+| **[Graphify](https://github.com/Graphify-Labs/graphify)** | Локальный knowledge graph кодовой базы для Cursor (AST + связи файлов) |
+| **tree-sitter** | Парсинг Python/JS при построении графа |
+| **NetworkX** | Хранение и обход графа (`graphify-out/graph.json`) |
+| **MCP** (`graphify.serve`) | Инструменты `query` / `path` / `explain` для агента в Cursor |
+
+Граф лежит в `graphify-out/` (`graph.html`, `GRAPH_REPORT.md`, `graph.json`).  
+Правило Cursor: `.cursor/rules/graphify.mdc`.
+
 ---
 
 ## Возможности
@@ -77,6 +88,7 @@ NIZKIPROF/
 │   ├── seo.py             # SEO-метаданные
 │   └── config.py          # настройки из .env
 ├── deploy/                # nginx и скрипты VPS
+├── graphify-out/          # knowledge graph (Graphify)
 ├── Dockerfile
 ├── docker-compose.yml
 └── requirements.txt
@@ -124,7 +136,8 @@ docker compose up --build -d
 - REST API на Flask, обработка форм и защита от спама;
 - интеграция Telegram Bot API (уведомления, inline-кнопки, статусы);
 - SEO: sitemap, Open Graph, Schema.org / JSON-LD;
-- контейнеризация Docker, nginx + SSL на VPS.
+- контейнеризация Docker, nginx + SSL на VPS;
+- knowledge graph проекта через Graphify (навигация для AI в Cursor).
 
 ---
 

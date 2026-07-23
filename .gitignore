@@ -17,3 +17,7 @@ Thumbs.db
 
 # Внутренние заметки (не для публичного репо)
 ТЗ.TXT
+
+# Graphify (кэш; graph.json / GRAPH_REPORT.md / graph.html можно коммитить)
+graphify-out/cache/
+graphify-out/converted/
