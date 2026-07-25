@@ -1,0 +1,557 @@
+{
+  "deploy/deploy.sh": {
+    "mtime": 1784822552.4197545,
+    "ast_hash": "91f8e38c83e6169ec681dff6de9fbc57",
+    "semantic_hash": "91f8e38c83e6169ec681dff6de9fbc57"
+  },
+  "deploy/setup-server.sh": {
+    "mtime": 1784822552.4166167,
+    "ast_hash": "1a44ef511763662e91b20c9792e76ad6",
+    "semantic_hash": "1a44ef511763662e91b20c9792e76ad6"
+  },
+  "script.js": {
+    "mtime": 1784822552.4025443,
+    "ast_hash": "06d67b4194559ce67f59c039838d7be5",
+    "semantic_hash": "06d67b4194559ce67f59c039838d7be5"
+  },
+  "server/app.py": {
+    "mtime": 1784943130.4903338,
+    "ast_hash": "99d767fe7966cea0d3a0c91465db6d50",
+    "semantic_hash": ""
+  },
+  "server/bot.py": {
+    "mtime": 1784943439.8671577,
+    "ast_hash": "1cc72bf63b2c708171cdfba0a9c3aa96",
+    "semantic_hash": ""
+  },
+  "server/config.py": {
+    "mtime": 1784942922.7852454,
+    "ast_hash": "43a1a4b8641f38bbae8e5546cb6c22f2",
+    "semantic_hash": ""
+  },
+  "server/seo.py": {
+    "mtime": 1784822552.4036102,
+    "ast_hash": "13553af810becae3b9ccac8e89d29635",
+    "semantic_hash": "13553af810becae3b9ccac8e89d29635"
+  },
+  "server/store.py": {
+    "mtime": 1784940196.451416,
+    "ast_hash": "b6822e2670a21505b7fb690d5ece8334",
+    "semantic_hash": ""
+  },
+  ".cursor/mcp.json": {
+    "mtime": 1784824426.6234963,
+    "ast_hash": "32787a6eb78a9b0e80b63991e96f3ac9",
+    "semantic_hash": "32787a6eb78a9b0e80b63991e96f3ac9"
+  },
+  "tools/enrich_graphify.py": {
+    "mtime": 1784940057.244238,
+    "ast_hash": "10f11f953df65a65c0b1e3f4bce87225",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1784825075.646981,
+    "ast_hash": "bcd45ff6c80d6cd3c4be087f3ca232f3",
+    "semantic_hash": ""
+  },
+  "about.html": {
+    "mtime": 1784822552.42495,
+    "ast_hash": "77960d993fb9300283d05031be5d684d",
+    "semantic_hash": ""
+  },
+  "argonnaya-svarka.html": {
+    "mtime": 1784822552.3981647,
+    "ast_hash": "eef70b55ee6c78a81c40488256ca7e20",
+    "semantic_hash": ""
+  },
+  "balansirovka.html": {
+    "mtime": 1784822552.4254565,
+    "ast_hash": "27e9dc64848bfe06535411268488cdce",
+    "semantic_hash": ""
+  },
+  "contacts.html": {
+    "mtime": 1784940057.244238,
+    "ast_hash": "9f132e190e0351005db8f2aa92bdf14c",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1784822552.4025443,
+    "ast_hash": "0df0d6e7ecd7c70b06f34911bb39ad36",
+    "semantic_hash": ""
+  },
+  "faq.html": {
+    "mtime": 1784826740.8208785,
+    "ast_hash": "b9d9f405e734456bb94e607a6dfea8ce",
+    "semantic_hash": ""
+  },
+  "gallery.html": {
+    "mtime": 1784822552.39765,
+    "ast_hash": "576c0f5715dbbe9fc41a5bd06009ee71",
+    "semantic_hash": ""
+  },
+  "hranenie-shin.html": {
+    "mtime": 1783380793.1530504,
+    "ast_hash": "4e532af9ab85698994165dd2676c921b",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1784822552.4197545,
+    "ast_hash": "2651f7dd91635b511a797265ab6dba62",
+    "semantic_hash": ""
+  },
+  "pokraska-diskov.html": {
+    "mtime": 1784822552.4254565,
+    "ast_hash": "dfee33d5c1db709e2a8ae10e0c5607a7",
+    "semantic_hash": ""
+  },
+  "pravka-diskov.html": {
+    "mtime": 1784822552.4160824,
+    "ast_hash": "2fb5b59aa328da5620762804fd2b7202",
+    "semantic_hash": ""
+  },
+  "price.html": {
+    "mtime": 1784822552.4020145,
+    "ast_hash": "966326113f9430b75dce470d425316b3",
+    "semantic_hash": ""
+  },
+  "privacy.html": {
+    "mtime": 1784822552.3929248,
+    "ast_hash": "8b2839874716b31fe2868d6e95aa2c69",
+    "semantic_hash": ""
+  },
+  "prodazha-shin.html": {
+    "mtime": 1784822552.4160824,
+    "ast_hash": "4416b7f956acbaf90aae1939c00c84a4",
+    "semantic_hash": ""
+  },
+  "recommendations.html": {
+    "mtime": 1784822552.4020145,
+    "ast_hash": "a42cb3e19d03adce7e8294331df22b4a",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1784822552.4197545,
+    "ast_hash": "7dc8832ad551e7efcba1800068925f29",
+    "semantic_hash": ""
+  },
+  "robots.txt": {
+    "mtime": 1784822552.4138587,
+    "ast_hash": "e82a12613a473ac42860c5fb91a60e39",
+    "semantic_hash": ""
+  },
+  "services.html": {
+    "mtime": 1784822552.4143887,
+    "ast_hash": "5cd11aa74ff3c4eb3df8a81e582106bd",
+    "semantic_hash": ""
+  },
+  "shinomontazh.html": {
+    "mtime": 1784822552.3981647,
+    "ast_hash": "4d3723dd5ee55c470c4a1f390cc08fba",
+    "semantic_hash": ""
+  },
+  "vibrocontrol.html": {
+    "mtime": 1784822552.4138587,
+    "ast_hash": "6924da880ec874293bfda2d572501f08",
+    "semantic_hash": ""
+  },
+  "\u0418\u041d\u0421\u0422\u0420\u0423\u041a\u0426\u0418\u042f-VPS.md": {
+    "mtime": 1784943467.0355313,
+    "ast_hash": "7884a8c9e3fa1fcf6a3d3ca4c03e64a4",
+    "semantic_hash": ""
+  },
+  "\u0418\u041d\u0421\u0422\u0420\u0423\u041a\u0426\u0418\u042f-\u0411\u041e\u0422.md": {
+    "mtime": 1784943458.5018592,
+    "ast_hash": "126b9db9ab3e5bd846e82bb263e24777",
+    "semantic_hash": ""
+  },
+  "assets/images/about.jpg": {
+    "mtime": 1781989489.0885618,
+    "ast_hash": "bc34179216908b9a8d4e5fd1f2b40754",
+    "semantic_hash": ""
+  },
+  "assets/images/booking.jpg": {
+    "mtime": 1778611852.0546238,
+    "ast_hash": "a95d7ec5a9d2a3eedf391c5d152ae063",
+    "semantic_hash": ""
+  },
+  "assets/images/cta-audi-rs6.png": {
+    "mtime": 1782844180.1236951,
+    "ast_hash": "9b966a78fe02cb79f1e683341d521456",
+    "semantic_hash": ""
+  },
+  "assets/images/gallery-01.jpeg": {
+    "mtime": 1778611852.1687582,
+    "ast_hash": "7f4a8ad459def7b8a80e34e1461d46e8",
+    "semantic_hash": ""
+  },
+  "assets/images/gallery-05.jpeg": {
+    "mtime": 1778611852.638743,
+    "ast_hash": "b40b99f794072c08c5369f83d4ef23f5",
+    "semantic_hash": ""
+  },
+  "assets/images/gallery-06.jpeg": {
+    "mtime": 1778611852.753767,
+    "ast_hash": "228a6fc5a25c70edec2f8256d1a8dfbb",
+    "semantic_hash": ""
+  },
+  "assets/images/hero-workshop.jpg": {
+    "mtime": 1781202823.4168062,
+    "ast_hash": "2886b65c0777dfa8bced1eb305a5934b",
+    "semantic_hash": ""
+  },
+  "assets/images/hero.jpg": {
+    "mtime": 1778611850.7335255,
+    "ast_hash": "2a34de88e5b0b9968e3d752f746e82f9",
+    "semantic_hash": ""
+  },
+  "assets/images/home-service-02.jpg": {
+    "mtime": 1782942228.7878325,
+    "ast_hash": "00f391df4447f9449deaf581f3c45d38",
+    "semantic_hash": ""
+  },
+  "assets/images/hunter-shop-stand.jpg": {
+    "mtime": 1781986204.215639,
+    "ast_hash": "21da1cc75bd15057456ad6c89d9e9e3f",
+    "semantic_hash": ""
+  },
+  "assets/images/hunter-stand-cut.jpg": {
+    "mtime": 1778679944.6554081,
+    "ast_hash": "dfd8dd2b87f0a58f8b6efd4910ae1da9",
+    "semantic_hash": ""
+  },
+  "assets/images/logo.png": {
+    "mtime": 1778611850.5822396,
+    "ast_hash": "46304f3a6a2f49f095f1b5bfbdde2b7e",
+    "semantic_hash": ""
+  },
+  "assets/images/paint-01.jpg": {
+    "mtime": 1783020476.9731467,
+    "ast_hash": "0e1c535d19e20c4cd200c0966f7180d2",
+    "semantic_hash": ""
+  },
+  "assets/images/paint-02.jpg": {
+    "mtime": 1783020476.9959354,
+    "ast_hash": "174664526ca6351d8612d9516b4e5aa3",
+    "semantic_hash": ""
+  },
+  "assets/images/paint-03.jpg": {
+    "mtime": 1783020477.0093112,
+    "ast_hash": "a8fb13ba56ff49fa2f098cc09c6653f3",
+    "semantic_hash": ""
+  },
+  "assets/images/paint-hero.jpg": {
+    "mtime": 1782945717.3589747,
+    "ast_hash": "f66b8224920cc49d4bdd6f603cfa7320",
+    "semantic_hash": ""
+  },
+  "assets/images/price-hranenie.png": {
+    "mtime": 1781987245.418425,
+    "ast_hash": "24e62115f403ac87902a66748ceca85e",
+    "semantic_hash": ""
+  },
+  "assets/images/price-pokraska.png": {
+    "mtime": 1781987245.3270433,
+    "ast_hash": "4f30963af216cea5a0b6a648e83d93d2",
+    "semantic_hash": ""
+  },
+  "assets/images/price-pravka.png": {
+    "mtime": 1781987244.847836,
+    "ast_hash": "3504700042cf3272946eea74bcf91909",
+    "semantic_hash": ""
+  },
+  "assets/images/price-vibro.png": {
+    "mtime": 1781987245.0571444,
+    "ast_hash": "3f5fbf6cdc07d3176a4cb78dbe610e7b",
+    "semantic_hash": ""
+  },
+  "assets/images/price.png": {
+    "mtime": 1784827015.018051,
+    "ast_hash": "ab6e35d2df7fe66b3855303cea68bac7",
+    "semantic_hash": ""
+  },
+  "assets/images/repair-01.jpg": {
+    "mtime": 1783019517.0383286,
+    "ast_hash": "b1bc298356a5984178268b0e9e148ff1",
+    "semantic_hash": ""
+  },
+  "assets/images/repair-02.jpg": {
+    "mtime": 1783019517.0801125,
+    "ast_hash": "8becc87a2d5fb67b9d935fa9a68d71be",
+    "semantic_hash": ""
+  },
+  "assets/images/repair-03.jpg": {
+    "mtime": 1783019517.1134708,
+    "ast_hash": "ae7bbe122367529fd8de157fb62a4b42",
+    "semantic_hash": ""
+  },
+  "assets/images/repair-hero.jpg": {
+    "mtime": 1783019516.9902256,
+    "ast_hash": "99c047b53ac07de2a6baa3f41029bcf4",
+    "semantic_hash": ""
+  },
+  "assets/images/sale-user-michelin.png": {
+    "mtime": 1781986651.110024,
+    "ast_hash": "2c466619540dfe47b07bb35a501fab5c",
+    "semantic_hash": ""
+  },
+  "assets/images/sale-user-stack.png": {
+    "mtime": 1779130719.8928752,
+    "ast_hash": "02bb06efc23edd657398aea8f1b5638f",
+    "semantic_hash": ""
+  },
+  "assets/images/sale-user-tread.png": {
+    "mtime": 1779130592.3781152,
+    "ast_hash": "dac4e35d8b0c0fc8c95e2b4746459dda",
+    "semantic_hash": ""
+  },
+  "assets/images/service-balance.jpg": {
+    "mtime": 1783024551.680951,
+    "ast_hash": "5ec243283fc993bff115cdb56847c193",
+    "semantic_hash": ""
+  },
+  "assets/images/service-mount.jpg": {
+    "mtime": 1778611851.076899,
+    "ast_hash": "20364057176e2d8d16c36c5643b3afd5",
+    "semantic_hash": ""
+  },
+  "assets/images/service-sale.jpg": {
+    "mtime": 1778611851.1964376,
+    "ast_hash": "ca30ce0e6d50cd7fc824e82617ee24c3",
+    "semantic_hash": ""
+  },
+  "assets/images/service-shinomontazh.png": {
+    "mtime": 1782844172.724444,
+    "ast_hash": "91e5ad1bb0370a53cfae7110d3c00f3d",
+    "semantic_hash": ""
+  },
+  "assets/images/service-storage.jpg": {
+    "mtime": 1778611851.7682066,
+    "ast_hash": "e303ad420591ddac7db7999c41681bd2",
+    "semantic_hash": ""
+  },
+  "assets/images/service-vibro.jpg": {
+    "mtime": 1778611851.3133593,
+    "ast_hash": "bc10d05fcbe28c3fbd996da79eb6f995",
+    "semantic_hash": ""
+  },
+  "assets/images/weld-01.jpg": {
+    "mtime": 1783024195.858601,
+    "ast_hash": "f824ad09c232592cf1107a3404777942",
+    "semantic_hash": ""
+  },
+  "assets/images/weld-02.jpg": {
+    "mtime": 1783024182.3935945,
+    "ast_hash": "1d862bd59d9c2989097060543283881b",
+    "semantic_hash": ""
+  },
+  "assets/images/weld-03.jpg": {
+    "mtime": 1783024182.401873,
+    "ast_hash": "b5fabeb107e37bdf0c2e4346925e2cd5",
+    "semantic_hash": ""
+  },
+  "assets/images/weld-hero.jpg": {
+    "mtime": 1783024182.4115624,
+    "ast_hash": "9882cff364788abf56d374a2e29d7ed4",
+    "semantic_hash": ""
+  },
+  "assets/images/work-amg-gt-beige.jpg": {
+    "mtime": 1783023751.5920515,
+    "ast_hash": "4b70c82b3ababd38a53f626c15f0f6de",
+    "semantic_hash": ""
+  },
+  "assets/images/work-amg-gt-white.jpg": {
+    "mtime": 1783023751.5817513,
+    "ast_hash": "cc734dd9f465329b37c540a0ac16eadd",
+    "semantic_hash": ""
+  },
+  "assets/images/work-audi-r8.jpg": {
+    "mtime": 1783381670.3633547,
+    "ast_hash": "f4115b4e136557ee6effb4536a218196",
+    "semantic_hash": ""
+  },
+  "assets/images/work-audi-rs6.jpg": {
+    "mtime": 1781988045.5539732,
+    "ast_hash": "1611737abe4d0b87d477691049e5c52f",
+    "semantic_hash": ""
+  },
+  "assets/images/work-dodge-challenger.jpg": {
+    "mtime": 1783023751.614114,
+    "ast_hash": "0be87a7279d3513bddf76c7e4ff0d6c3",
+    "semantic_hash": ""
+  },
+  "assets/images/work-dodge-charger.jpg": {
+    "mtime": 1783377179.9910252,
+    "ast_hash": "2791387a9698b572da225d4a2d1ca573",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-01.jpg": {
+    "mtime": 1781202821.1792572,
+    "ast_hash": "f4a96259f1b13f7521d5f434752043a5",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-02.jpg": {
+    "mtime": 1781202821.573229,
+    "ast_hash": "0981713cb2302fee451e46392a7ff142",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-03.jpg": {
+    "mtime": 1781202821.6742117,
+    "ast_hash": "04d0457d41c131fc0ddf212ebfa76049",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-04.jpg": {
+    "mtime": 1781202821.7259586,
+    "ast_hash": "5a624777e33afbd870f52d080de168fd",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-05.jpg": {
+    "mtime": 1781202821.9713008,
+    "ast_hash": "5bba4db7f42758bf10ec0ae2051ea6ce",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-06.jpg": {
+    "mtime": 1781202822.0236175,
+    "ast_hash": "53d4f6b6503c51d522136a6462a42fbe",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-07.jpg": {
+    "mtime": 1781202822.2794168,
+    "ast_hash": "27d7571eabf7fb1c3af454275dbd0181",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-08.jpg": {
+    "mtime": 1783376563.687422,
+    "ast_hash": "4504e6b777641b4dc31e08d1fc14144b",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-09.jpg": {
+    "mtime": 1783192617.602936,
+    "ast_hash": "c79a7cc54556daad9ff4925515971968",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-10.jpg": {
+    "mtime": 1783192617.6347353,
+    "ast_hash": "9e29dac0331f9ab893b216a50f778173",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-11.jpg": {
+    "mtime": 1781202823.138917,
+    "ast_hash": "92d57fcada74d52948d99aa784544f0e",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-12.jpg": {
+    "mtime": 1783381907.9741025,
+    "ast_hash": "cc81c569d2477d15f0ac67534d44ebcb",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gallery-hero.jpg": {
+    "mtime": 1781202822.4144628,
+    "ast_hash": "31232ebe451c23efc8bcdf528bafc50b",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gclass-beige.jpg": {
+    "mtime": 1783382364.4564638,
+    "ast_hash": "8fe0791679a18f52dce94360e2b2736d",
+    "semantic_hash": ""
+  },
+  "assets/images/work-gclass-black.jpg": {
+    "mtime": 1781988045.7820208,
+    "ast_hash": "c0a82bc12a82770914efb961edebeaa2",
+    "semantic_hash": ""
+  },
+  "assets/images/work-hunter-a.jpg": {
+    "mtime": 1781988040.0910182,
+    "ast_hash": "21da1cc75bd15057456ad6c89d9e9e3f",
+    "semantic_hash": ""
+  },
+  "assets/images/work-hunter-b.jpg": {
+    "mtime": 1781988041.3476646,
+    "ast_hash": "fa054b5a22683dceca3ababfd88c1eec",
+    "semantic_hash": ""
+  },
+  "assets/images/work-porsche-718.jpg": {
+    "mtime": 1783381280.2478395,
+    "ast_hash": "08b57cf62f70194d65b4b611e9aeb7d5",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-04.jpg": {
+    "mtime": 1781202822.912532,
+    "ast_hash": "b2b289b6bc57befe95fa219f7db787c4",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-05.jpg": {
+    "mtime": 1781986651.4591107,
+    "ast_hash": "7240b996aa293d1fc4c786d43af5ac87",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-06.jpg": {
+    "mtime": 1781986651.4658625,
+    "ast_hash": "fe9ce46d127759977c5f2be32cc4497b",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-08.jpg": {
+    "mtime": 1781986651.483039,
+    "ast_hash": "b61e64549b499adea2e6f2eb53472988",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-09.jpg": {
+    "mtime": 1781986651.4924066,
+    "ast_hash": "535d8a7455fd0bd3984782f966b55b7b",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-10.jpg": {
+    "mtime": 1781986651.499333,
+    "ast_hash": "c31f5b197d0ca1e1b7ee107f5d7a9296",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-11.jpg": {
+    "mtime": 1781204087.2319095,
+    "ast_hash": "f1de50e1f27c5408012d41f22abee13f",
+    "semantic_hash": ""
+  },
+  "assets/images/work-preview-12.jpg": {
+    "mtime": 1781204087.1831138,
+    "ast_hash": "147d6697c019959137b5d8fc945ff470",
+    "semantic_hash": ""
+  },
+  "assets/images/work-tire-r24.jpg": {
+    "mtime": 1783381390.3926075,
+    "ast_hash": "83bd9b03816ada6e81a8e6705aa4ccd6",
+    "semantic_hash": ""
+  },
+  "assets/images/work-vw-transporter.jpg": {
+    "mtime": 1783023751.6250148,
+    "ast_hash": "d98f71a82c6b2b51b861cd8d97dac72d",
+    "semantic_hash": ""
+  },
+  "assets/images/work-wheel-bronze.jpg": {
+    "mtime": 1781988042.5521588,
+    "ast_hash": "d4494b908835641198436adab244c926",
+    "semantic_hash": ""
+  },
+  "assets/images/work-wheel-gunmetal.jpg": {
+    "mtime": 1781988044.007125,
+    "ast_hash": "f62785bc73bb6a3f030fffd5f353ce3c",
+    "semantic_hash": ""
+  },
+  "assets/images/works-home-02.jpg": {
+    "mtime": 1783378874.2148564,
+    "ast_hash": "1d68d8b2933b1406e8519b95ef46718e",
+    "semantic_hash": ""
+  },
+  "assets/images/works-home-04.jpg": {
+    "mtime": 1783378874.2247999,
+    "ast_hash": "698f1559fd73041abbe452b092a5b158",
+    "semantic_hash": ""
+  },
+  "assets/images/yandex-award.png": {
+    "mtime": 1782059817.5599968,
+    "ast_hash": "cd251e7612530e0ee60370aa7a13cd81",
+    "semantic_hash": ""
+  },
+  "server/reminders.py": {
+    "mtime": 1784943037.8572912,
+    "ast_hash": "7fd0d11c187b8ed771ef2b1e58d76aef",
+    "semantic_hash": ""
+  }
+}

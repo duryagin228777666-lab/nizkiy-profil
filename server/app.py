@@ -5,10 +5,11 @@
 2. Принимает заявки с формы по адресу POST /api/booking.
 3. Запускает Telegram-бота (в фоновом потоке).
 """
+import ipaddress
 import os
 import threading
 
-from flask import Flask, Response, abort, jsonify, request, send_from_directory
+from flask import Flask, Response, abort, jsonify, redirect, request, send_from_directory
 from flask_cors import CORS
 
 import bot as bot_module
@@ -16,8 +17,14 @@ import config
 import seo
 import store
 
-app = Flask(__name__, static_folder=config.SITE_DIR, static_url_path="")
-CORS(app)
+# static_folder=None: корень проекта НЕ отдаётся целиком, иначе по HTTP были бы
+# доступны server/bookings.json, .env, логи и внутренние документы.
+app = Flask(__name__, static_folder=None)
+CORS(app, resources={r"/api/*": {"origins": config.CORS_ORIGINS}})
+
+# Единственные файлы в корне проекта, которые можно отдавать наружу
+PUBLIC_ROOT_FILES = ("styles.css", "script.js", "favicon.ico")
+ASSETS_DIR = os.path.join(config.SITE_DIR, "assets")
 
 # Защита от спама
 ANTIBOT_MIN_MS = 1500       # форму нельзя отправить быстрее, чем за 1.5 сек
@@ -25,11 +32,26 @@ RL_MIN_INTERVAL = 300       # не чаще 1 заявки в 5 минут (с �
 RL_DAILY_MAX = 5            # не больше 5 заявок в сутки (с номера/IP)
 
 
+def _is_local_proxy(addr: str) -> bool:
+    try:
+        ip = ipaddress.ip_address(addr)
+    except ValueError:
+        return False
+    return ip.is_loopback or ip.is_private
+
+
 def _client_ip():
-    forwarded = request.headers.get("X-Forwarded-For", "")
-    if forwarded:
-        return forwarded.split(",")[0].strip()
-    return request.remote_addr or ""
+    """IP клиента для лимитов.
+
+    Заголовкам доверяем только если запрос пришёл от локального nginx: клиент
+    может прислать любой X-Forwarded-For и так обойти лимиты на заявки.
+    """
+    remote = request.remote_addr or ""
+    if _is_local_proxy(remote):
+        real = request.headers.get("X-Real-IP", "").strip()
+        if real:
+            return real
+    return remote
 
 
 def _base_url() -> str:
@@ -55,6 +77,12 @@ def index():
     return _serve_html("index.html")
 
 
+@app.route("/index.html")
+def index_html():
+    # В меню сайта ссылка «Главная» ведёт на index.html — уводим на канонический /
+    return redirect("/", code=301)
+
+
 @app.route("/robots.txt")
 def robots():
     seo.set_base_url(_base_url())
@@ -67,7 +95,13 @@ def sitemap():
     return Response(seo.sitemap_xml(), mimetype="application/xml; charset=utf-8")
 
 
-def _register_html_routes():
+@app.route("/assets/<path:filename>")
+def assets(filename):
+    # send_from_directory сам блокирует выход за пределы папки (../)
+    return send_from_directory(ASSETS_DIR, filename)
+
+
+def _register_static_routes():
     for page_name in seo.HTML_PAGES:
         if page_name == "index.html":
             continue
@@ -76,9 +110,15 @@ def _register_html_routes():
             endpoint=f"page_{page_name.replace('.', '_')}",
             view_func=lambda pn=page_name: _serve_html(pn),
         )
+    for file_name in PUBLIC_ROOT_FILES:
+        app.add_url_rule(
+            f"/{file_name}",
+            endpoint=f"file_{file_name.replace('.', '_')}",
+            view_func=lambda fn=file_name: send_from_directory(config.SITE_DIR, fn),
+        )
 
 
-_register_html_routes()
+_register_static_routes()
 
 
 @app.route("/api/booking", methods=["POST"])
@@ -128,7 +168,8 @@ def api_booking():
 
 @app.route("/api/health")
 def health():
-    return jsonify(ok=True, bot=bool(config.BOT_TOKEN), owners=len(config.OWNER_CHAT_IDS))
+    # Только признак «сервер жив»: состав настроек наружу не показываем
+    return jsonify(ok=True)
 
 
 def _start_bot():

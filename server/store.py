@@ -26,12 +26,53 @@ STATUS_LABELS = {
     "cancelled": "❌ Отменена",
 }
 
+SERVICES = [
+    "Шиномонтаж",
+    "Продажа шин",
+    "Виброконтроль Hunter",
+    "Правка дисков",
+    "Аргонная сварка",
+    "Порошковая покраска",
+    "Хранение шин",
+]
+
 # Москва (UTC+3) — для времени в заявках
 _MSK = timezone(timedelta(hours=3))
+_VISIT_FMT = "%Y-%m-%d %H:%M"
+
+
+def _now() -> datetime:
+    return datetime.now(_MSK)
 
 
 def _now_iso() -> str:
-    return datetime.now(_MSK).strftime("%Y-%m-%d %H:%M")
+    return _now().strftime(_VISIT_FMT)
+
+
+def parse_visit_at(value: str):
+    """Разобрать строку визита 'YYYY-MM-DD HH:MM' → datetime (МСК) или None."""
+    raw = (value or "").strip()
+    if not raw:
+        return None
+    try:
+        dt = datetime.strptime(raw, _VISIT_FMT)
+    except ValueError:
+        return None
+    return dt.replace(tzinfo=_MSK)
+
+
+def format_visit_at(dt: datetime) -> str:
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=_MSK)
+    return dt.astimezone(_MSK).strftime(_VISIT_FMT)
+
+
+def format_visit_human(value: str) -> str:
+    dt = parse_visit_at(value)
+    if not dt:
+        return value or ""
+    weekdays = ("пн", "вт", "ср", "чт", "пт", "сб", "вс")
+    return f"{dt.strftime('%d.%m.%Y')} ({weekdays[dt.weekday()]}) в {dt.strftime('%H:%M')}"
 
 
 def _read():
@@ -56,15 +97,24 @@ def _gen_code(existing_codes):
         code = "".join(random.choice(_CODE_ALPHABET) for _ in range(_CODE_LEN))
         if code not in existing_codes:
             return code
-    # Крайне маловероятно: добавим суффикс времени
     return "".join(random.choice(_CODE_ALPHABET) for _ in range(_CODE_LEN)) + str(int(time.time()))[-2:]
 
 
-def add_booking(name: str, phone: str, service: str, comment: str, ip: str = "") -> dict:
+def add_booking(
+    name: str,
+    phone: str,
+    service: str,
+    comment: str = "",
+    ip: str = "",
+    source: str = "site",
+    visit_at: str = "",
+) -> dict:
     with _lock:
         data = _read()
         existing = {b["code"] for b in data["bookings"]}
         data["seq"] += 1
+        visit = (visit_at or "").strip()
+        status = "confirmed" if visit else "new"
         booking = {
             "id": data["seq"],
             "code": _gen_code(existing),
@@ -72,7 +122,10 @@ def add_booking(name: str, phone: str, service: str, comment: str, ip: str = "")
             "phone": (phone or "").strip(),
             "service": (service or "").strip() or "Шиномонтаж",
             "comment": (comment or "").strip(),
-            "status": "new",
+            "status": status,
+            "source": (source or "site").strip() or "site",
+            "visit_at": visit,
+            "reminder_sent": False,
             "created_at": _now_iso(),
             "ts": time.time(),
             "ip": (ip or "").strip(),
@@ -159,10 +212,71 @@ def update_status(code: str, status: str):
     return None
 
 
+def set_visit(code: str, visit_at: str):
+    """Назначить или перенести визит. Сбрасывает флаг напоминания."""
+    dt = parse_visit_at(visit_at)
+    if not dt:
+        return None
+    code = (code or "").strip().upper()
+    with _lock:
+        data = _read()
+        for b in data["bookings"]:
+            if b["code"] == code:
+                b["visit_at"] = format_visit_at(dt)
+                b["reminder_sent"] = False
+                if b.get("status") in ("new", "cancelled"):
+                    b["status"] = "confirmed"
+                _write(data)
+                return b
+    return None
+
+
+def mark_reminder_sent(code: str):
+    code = (code or "").strip().upper()
+    with _lock:
+        data = _read()
+        for b in data["bookings"]:
+            if b["code"] == code:
+                b["reminder_sent"] = True
+                _write(data)
+                return b
+    return None
+
+
+def due_for_reminder(hours_before: int = 5):
+    """Заявки, которым пора напомнить (за hours_before до визита, ещё не отправляли)."""
+    now = _now()
+    result = []
+    with _lock:
+        data = _read()
+        bookings = list(data["bookings"])
+    for b in bookings:
+        if b.get("reminder_sent"):
+            continue
+        if b.get("status") in ("cancelled", "done"):
+            continue
+        visit = parse_visit_at(b.get("visit_at", ""))
+        if not visit:
+            continue
+        remind_from = visit - timedelta(hours=hours_before)
+        if remind_from <= now < visit:
+            result.append(b)
+    return result
+
+
 def recent(limit: int = 10):
     with _lock:
         data = _read()
         return list(reversed(data["bookings"][-limit:]))
+
+
+def active_for_visit(limit: int = 15):
+    """Заявки, которым ещё можно назначить/перенести визит."""
+    skip = {"cancelled", "done"}
+    with _lock:
+        data = _read()
+        items = [b for b in reversed(data["bookings"]) if b.get("status") not in skip]
+    return items[:limit]
 
 
 def status_label(status: str) -> str:

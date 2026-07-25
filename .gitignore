@@ -15,8 +15,12 @@ env/
 Thumbs.db
 .DS_Store
 
-# Внутренние заметки (не для публичного репо)
+# Внутренние заметки и документы (не для публичного репо)
 ТЗ.TXT
+*.docx
+
+# Логи (могут содержать телефоны клиентов)
+*.log
 
 # Graphify (кэш; graph.json / GRAPH_REPORT.md / graph.html можно коммитить)
 graphify-out/cache/

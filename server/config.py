@@ -57,6 +57,39 @@ SITE_URL = os.getenv("SITE_URL", "").strip().rstrip("/")
 YANDEX_METRIKA_ID = os.getenv("YANDEX_METRIKA_ID", "").strip()
 
 
+def _build_cors_origins():
+    """Кому разрешено обращаться к /api/ из браузера.
+
+    По умолчанию — только сам сайт и локальная разработка. Иначе любой чужой
+    сайт мог бы отправлять заявки из браузера наших посетителей.
+    """
+    origins = [
+        "http://localhost:5000",
+        "http://127.0.0.1:5000",
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+    ]
+    for raw in (SITE_URL, os.getenv("CORS_ORIGINS", "")):
+        for part in raw.replace(" ", ",").split(","):
+            part = part.strip().rstrip("/")
+            if part and part not in origins:
+                origins.append(part)
+    return origins
+
+
+CORS_ORIGINS = _build_cors_origins()
+
+# Напоминание о визите: за сколько часов и как часто проверять
+REMINDER_HOURS = int(os.getenv("REMINDER_HOURS", "5"))
+REMINDER_CHECK_SEC = int(os.getenv("REMINDER_CHECK_SEC", "60"))
+
+# SMS.ru (подключите позже). Пока напоминания только в лог + Telegram владельцу.
+SMS_API_ID = os.getenv("SMS_API_ID", "").strip()
+
+# Прокси для Telegram API, если api.telegram.org недоступен (например socks5://127.0.0.1:1080)
+TELEGRAM_PROXY = os.getenv("TELEGRAM_PROXY", "").strip()
+
+
 def bot_link(code: str) -> str:
     """Ссылка для клиента: открыть бота и сразу проверить статус по коду."""
     if not BOT_USERNAME:

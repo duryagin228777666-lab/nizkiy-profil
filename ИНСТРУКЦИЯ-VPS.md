@@ -107,8 +107,10 @@ Certbot сам выпустит сертификат и настроит ред�
 1. Сайт открывается по HTTPS.
 2. Форма записи отправляет заявку — приходит в Telegram.
 3. Бот отвечает на команду `/id` и на код заявки.
-4. `https://nizkiyprofil.ru/api/health` — ответ `{"ok":true,...}`.
+4. `https://nizkiyprofil.ru/api/health` — ответ `{"ok":true}`.
 5. `https://nizkiyprofil.ru/sitemap.xml` — карта сайта для поисковиков.
+6. `https://nizkiyprofil.ru/server/bookings.json` — должно быть **404**.
+   Если открылся список заявок, значит сервер запущен со старым кодом.
 
 ---
 
