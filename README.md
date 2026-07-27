@@ -2,7 +2,17 @@
 
 Сайт и бэкенд шиномонтажа в Жулебино (Москва): многостраничный лендинг, форма онлайн-записи и Telegram-бот для заявок и отслеживания статуса.
 
-**Живой сайт:** [nizkiyprofil.ru](https://nizkiyprofil.ru)
+**Домен:** [nizkiyprofil.ru](https://nizkiyprofil.ru) — пока на нём **прошлый сайт**. Код в этом репозитории — новая версия (ещё не выкатана на домен).
+
+### Скриншоты текущего сайта на домене
+
+| Главная | Отзывы |
+|---|---|
+| ![Главная](docs/screenshots/02-home.png) | ![Отзывы](docs/screenshots/01-reviews.png) |
+
+| Заявка / контакты | FAQ |
+|---|---|
+| ![Форма заявки](docs/screenshots/03-booking.png) | ![FAQ](docs/screenshots/04-faq.png) |
 
 ---
 
@@ -102,21 +112,23 @@
 
 ```
 NIZKIPROF/
-├── index.html, *.html     # страницы сайта
-├── styles.css, script.js  # стили и клиентская логика
-├── assets/                # изображения, логотип
-├── server/
-│   ├── app.py             # Flask: сайт + API
-│   ├── bot.py             # Telegram-бот (владелец + клиент)
-│   ├── store.py           # хранилище заявок (JSON)
-│   ├── reminders.py       # напоминания о визите
-│   ├── seo.py             # SEO-метаданные
-│   └── config.py          # настройки из .env
-├── deploy/                # nginx и скрипты VPS
-├── graphify-out/          # knowledge graph (Graphify)
-├── Dockerfile
-├── docker-compose.yml
-└── requirements.txt
+|-- index.html, *.html      # страницы сайта
+|-- styles.css, script.js   # стили и клиентская логика
+|-- assets/                 # изображения, логотип
+|-- docs/
+|   `-- screenshots/        # скриншоты сайта для README
+|-- server/
+|   |-- app.py              # Flask: сайт + API
+|   |-- bot.py              # Telegram-бот (владелец + клиент)
+|   |-- store.py            # хранилище заявок (JSON)
+|   |-- reminders.py        # напоминания о визите
+|   |-- seo.py              # SEO-метаданные
+|   `-- config.py           # настройки из .env
+|-- deploy/                 # nginx и скрипты VPS
+|-- graphify-out/           # knowledge graph (Graphify)
+|-- Dockerfile
+|-- docker-compose.yml
+`-- requirements.txt
 ```
 
 ---
