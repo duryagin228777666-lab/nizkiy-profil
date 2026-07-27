@@ -14,6 +14,12 @@
 |---|---|
 | ![Форма заявки](docs/screenshots/03-booking.png) | ![FAQ](docs/screenshots/04-faq.png) |
 
+### Telegram-бот
+
+| Владелец (новая заявка + статусы) | Клиент (статус по коду) |
+|---|---|
+| ![Бот — владелец](docs/screenshots/05-bot-owner.png) | ![Бот — клиент](docs/screenshots/06-bot-client.png) |
+
 ---
 
 ## О проекте
